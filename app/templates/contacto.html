@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto | Hugo Garrido Caballero{% endblock %}
+
+{% block content %}
+<section class="container mt-5">
+    <h1 class="text-center">Contacto</h1>
+    <p class="text-center">Déjame un mensaje y me pondré en contacto contigo.</p>
+
+    <form action="{{ url_for('contacto') }}" method="POST" class="contact-form">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+    </form>
+
+    {% if enviado %}
+    <div class="alert alert-success mt-4" role="alert">
+        ✅ ¡Tu mensaje ha sido enviado correctamente! Te responderé pronto.
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('sobre_mi') }}">Sobre Mí</a></li>
+            <li><a href="{{ url_for('proyectos') }}">Proyectos</a></li>
+            <li><a href="{{ url_for('curriculum') }}">Currículum</a></li>
+            <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Mis Proyectos</h1>
+        <p>Aquí puedes ver algunos de los trabajos en los que he participado.</p>
+        
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='img/proyecto1.jpg') }}" alt="Proyecto 1">
+                <h3>Sistema de Deteccion y Respuesta ante Intrusiones</h3>
+                <p>Sistema de Detección y Respuesta ante Intrusiones (IDRS) basado en inteligencia artificial. Este sistema estaría diseñado para monitorear en tiempo real el tráfico de red, identificar patrones sospechosos o anomalías, y responder automáticamente ante posibles amenazas, como ataques de ransomware, phishing o exploits de vulnerabilidades..</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+            <div class="project-card">
+                <img src="{{ url_for('static', filename='img/proyecto2.jpg') }}" alt="Proyecto 2">
+                <h3>Plataforma de Gestión de Tareas Colaborativas </h3>
+                <p>. Esta plataforma permitiría a los usuarios organizar, asignar y realizar un seguimiento de tareas de manera eficiente, integrando herramientas de comunicación y automatización para mejorar la productividad.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Mi Portfolio - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
